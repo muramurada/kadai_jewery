@@ -1,6 +1,12 @@
 @charset "utf-8";
 * {
     list-style: none;
+    margin: 0;
+    padding: 0;
+}
+img {
+    max-width: 100%;
+    vertical-align: bottom;
 }
 ul {
     padding: 0;
@@ -11,10 +17,14 @@ body {
     font-style: normal;
 }
 .main_header {
-    width: 90vw;
+    width: 90%;
     margin: 0 auto;
-    padding-bottom: 30px;
-    /* padding: 20px; */
+}
+.mainvisual {
+    width: 100%;
+    height: 50vh;
+    object-fit: cover;
+    text-align: center;
 }
 .container {
     max-width: 1000px;
@@ -27,6 +37,13 @@ body {
 .wrap {
     display: flex;
     align-items: center;
+    margin: 0 auto 30px auto;
+    padding: 32px 0;
+}
+.header--h1 {
+    width: 110px;
+    line-height: 1px;
+    margin-left: 50px;
 }
 .header--nav {
     display: flex;
@@ -34,23 +51,25 @@ body {
     margin-left: 50px;
     font-size: 13px;
 }
-/* .main {
-    margin: 0 auto;
-} */
 .content {
     display: flex;
     width: 95%;
     margin: 0 auto;
     align-items: center;
-    padding-bottom: 50px;
-    /* gap: 30px; */
+    padding-bottom: 35px;
 }
 .content--img {
     width: 50%;
 }
-.content--li {
+.content--text {
     width: 50%;
     padding: 50px;
+}
+.content--text p:nth-child(1) {
+    font-size: 1.75rem;
+}
+.content--text p:nth-child(2) {
+    margin-bottom: 25px;
 }
 .row-reverse {
     flex-direction: row-reverse;
@@ -60,32 +79,45 @@ body {
     justify-content: space-between;
     align-items: center;
     padding: 20px 0;
-    /* border: 1px solid red; */
 }
 
 @media  screen and (max-width: 767px) {
+    .wrap {
+        width: 100%;
+        padding: 20px 18px;
+    }
+    .header--h1 {
+        width: 110px;
+        line-height: 1px;
+        margin-left: 50px;
+    }
     .container,.main_header {
-        max-width: 767px;
+        width: 100%;
+        object-fit: cover;
         margin: 0 auto;
     }
     .content {
         display: flex;
         flex-direction: column;
-        /* width: 100%; */
         margin: 0 auto;
         align-items: center;
         list-style: none;
-        /* padding-bottom: 50px; */
-        /* gap: 30px; */
+        padding-bottom: 0px;
     }
     .content--img {
         width: 100%;
+        margin-bottom: 10px;
     }
-    .content--li {
+    .content--text {
         width: 100%;
         padding-top: 0;
         padding-left: 0;
         padding-right: 0;
-        /* padding: 50px; */
+    }
+    .content--text p:nth-child(1) {
+        font-size: 1.25rem;
+    }
+    .content--text p:nth-child(2) {
+        margin-bottom: 25px;
     }
 }
